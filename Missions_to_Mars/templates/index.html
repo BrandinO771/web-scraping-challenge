@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body style="background-color:#977349 ;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Exploration Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+     
+<style>
+  table, th, td {
+    border: 1px solid black;
+    centered 
+  }
+  </style>
+
+
+<body>
+  <div class="container-fluid" >
+    <div class="jumbotron text-center" style="background-color:rgb(144, 142, 142)">
+      <h1> Mission to Mars </h1>
+      <p><a class="btn btn-primary btn-lg"   href="/scrape" role="button">Get Data!</a></p>
+
+    </div>
+
+
+    </div>
+
+  </div>
+
+  <div class="container">
+         <br>
+
+          <!-- Row 1 -->
+       
+          <div class="row">
+            <div class="col-md-12">
+  
+            </div>
+          </div>
+
+        <h3> Latest Mars News </h3> 
+        <h3>{{mars_data_insert.news_title[0]  }}</h3>
+        <p> {{mars_data_insert.news_p[0]  }}</p> 
+
+             <br>
+     
+          <!-- Row 2 -->
+          <div class="row"  >
+          
+            <div class="col-lg-7 " style="background-color:rgb(124, 124, 180)">
+                <br>
+                </section>
+                  <div class="text-left">
+                    <font size= "5">                
+                   Featured JPL Image 
+                    </font>
+                   </div>
+                  
+                  <br>
+               
+                  <!-- <img id="bio-image"  src= "{{mars_data_insert.featured_image_url[0]}}" alt="Featured Image"> -->
+                  <img src= "{{ mars_data_insert.featured_image_url}}" height = 100% width = 100% alt="Featured Image">
+                    <p>   </p>
+                    <p>image link: {{ mars_data_insert.featured_image_url }}</p>
+                 </section>
+
+             </div>
+
+
+            <!-- THIS IS JUST A SPACER BETWEEN 2 HORZ COLUMS - THIS IS COL 2 AND ITS WHITE -->
+              <div class="col-md-1 nopadding" style="background-color:rgb(#ffffff)"></div>
+
+            <div class="col-md-4" style="background-color:rgb(124, 124, 180)">
+                <div class="text-center">
+                <br>
+                    
+                <!-- <h4>Visualizations</h4> -->
+                <div class="text-center">
+                  <font size= "5">                
+                  Current Weather On Mars 
+                  </font>
+                </div>
+                <br>
+                <table >
+                   
+                  <tr>
+                  <th> {{mars_data_insert.mars_weather[0:165]}}</th>
+                  </tr>
+                  </table>
+
+               
+                <div class="row"  >
+                <br>              
+                </div> 
+       
+                  <table align="center">
+                    <div class="text-center">
+                      <font size= "5">                
+                        Mars Facts
+                      </font>
+                  
+                  <!-- <h4> Mars Facts </h4> class="text-center"> -->
+                  {% for item   in mars_data_insert.mars_info_table %}
+            
+                  <tr>
+                  <td>{{ item  }}</td>
+                  <!-- <td>{{ item[1]  }}</td> -->
+                  </tr>
+                  <tr>
+                    <!-- <td>&nbsp;</td> -->
+                  </tr>
+                  {% endfor %}
+
+                  </table>
+
+                <br>
+                <br>
+
+              </div>
+            
+
+
+
+
+
+
+            </div>
+          </div>
+  
+  </div>
+
+
+  <div class="col-md-12" style="background-color:rgb(124, 124, 180)">
+    <div class="row"  >
+      <br>              
+      </div> 
+    <div class="text-center">
+    <br>
+        
+    <!-- <h4>Visualizations</h4> -->
+    <div class="text-center">
+      <font size= "5">                
+      THE FOUR HEMISPHERES OF MARS 
+      </font>
+    </div>
+    <br>
+    
+     
+    <img src= "{{ mars_data_insert.hemisphere_image_urls[0].img_url }}" height = 25% width = 25% alt="Featured Image">
+    <font size= "5">                
+      {{ mars_data_insert.hemisphere_image_urls[0].hem_list }}  
+    </font>  
+          
+    <img src= "{{ mars_data_insert.hemisphere_image_urls[1].img_url }}" height = 25% width = 25% alt="Featured Image">
+                   
+     <p> {{ mars_data_insert.hemisphere_image_urls[1].hem_list }}</p>
+  
+    <div class="row"  >
+    <br>              
+    </div> 
+      
+ 
+    <img src= "{{ mars_data_insert.hemisphere_image_urls[2].img_url}}" height = 25% width = 25% alt="Featured Image">
+    <font size= "5">                
+      {{ mars_data_insert.hemisphere_image_urls[1].hem_list }}
+    </font>   
+          
+    <img src= "{{ mars_data_insert.hemisphere_image_urls[3].img_url}}" height = height width = 25%  alt="Featured Image">
+  
+    <br>
+    <br>
+    <font size= "5">                
+      {{ mars_data_insert.hemisphere_image_urls[1].hem_list }}
+    </font>   
+    <p> Above is the most amazing thing you have ever SEEN! .</p>
+  </div>
+
+</div>
+</div>
+
+
+
+<p> {{ mars_data_insert.hemisphere_image_urls[1].hem_list }}</p>
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+

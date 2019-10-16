@@ -1,0 +1,118 @@
+/*
+ First External CSS Stylesheet
+ */
+
+
+
+ #bio-image_sm {
+  width: 160px;
+  height: 110px;
+  /* margin-right: 20px; */
+}
+
+
+#bio-image_med {
+  width: 280px;
+  height: 190px;
+  /* margin-right: 20px; */
+}
+
+
+#bio-image_lg {
+  width: 600px;
+  height: 400px;
+  /* margin-right: 20px; */
+}
+
+
+#bio-image {
+  width: 400px;
+  height: 300px;
+  margin-right: 20px;
+ float: left; /*this makes text able to wrap around the image */
+}
+
+p {
+  padding: 10px;
+}
+
+
+
+
+
+ @media screen and (min-width: 905px)
+  {
+    .navbar.navbar-expand-lg.navbar-dark
+    {
+     background-color: rgb(154,154, 214); 
+      color: rgb(66, 3, 14); 
+    
+    }
+   
+    .dropdown {
+      background-color: rgb(127, 127, 179); 
+      color: Pink; 
+    }
+     .navbar-toggler
+     {
+     background-color: rgb(127, 127, 179); 
+     color: Pink; 
+   }
+
+}
+
+ @media screen and (max-width: 904px)
+  { 
+    body 
+    { 
+    background-color: rgb(255, 255, 180); 
+    color: rgb(32, 0, 173); 
+    } 
+
+    .navbar-fixed-top 
+    {
+    background-color: rgb(255, 0, 200); 
+    color: Pink; 
+    }
+    .collapse.navbar-collapse{
+    background-color: rgb(0, 228, 95); 
+    color: Pink; 
+
+    } 
+    .navbar-brand{
+    background-color: rgb(154,154,214); 
+    color: Pink; 
+    } 
+
+    .navbar.navbar-expand-lg.navbar-dark
+    {
+    background-color: rgb(255, 255, 180); 
+    /* color: rgb(66, 3, 14);  */
+    }
+
+    .navbar-toggler
+    {
+    background-color: rgb(255, 0, 200); 
+    color: Pink; 
+    }
+
+    .navbar-header 
+    {
+    background-color: rgb(255, 0, 200); 
+    color: Pink; 
+    }
+
+    .dropdown 
+    {
+    background-color: rgb(255, 0, 200); 
+    color: Pink; 
+    }
+    .dropdown-menu
+    {
+    background-color: rgb(255, 0, 200); 
+    color: Pink; 
+    }
+}
+
+
+
